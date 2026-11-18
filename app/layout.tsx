@@ -5,6 +5,7 @@ import { CartProvider } from "@/components/CartContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import QuoteDrawer from "@/components/QuoteDrawer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -68,7 +69,18 @@ const organizationJsonLd = {
       "@id": "https://www.nuvamed.co.in/#organization",
       name: "Nuvamed Diagnostics LLP Limited",
       url: "https://www.nuvamed.co.in",
-      email: "nuvameddx@gmail.com",
+      email: "info@magnusdiagnostics.in",
+      telephone: "+91-9061381010",
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: "+91-9061381010",
+          contactType: "customer service and institutional procurement",
+          email: "info@magnusdiagnostics.in",
+          areaServed: "IN",
+          availableLanguage: ["en", "hi", "ml"],
+        },
+      ],
       description:
         "Direct authorized India distribution channel for US-manufactured Luminous BioSciences products, cfDNA extraction kits, exosome isolation tools, and mycoplasma qPCR assays.",
       address: {
@@ -117,6 +129,7 @@ export default function RootLayout({
           <Header />
           <main className="flex-1">{children}</main>
           <QuoteDrawer />
+          <FloatingWhatsApp />
           <Footer />
         </CartProvider>
       </body>

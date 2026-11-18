@@ -169,6 +169,21 @@ export default function QuoteDrawer() {
               >
                 Proceed to Institutional Proforma Form &rarr;
               </Link>
+              <a
+                href={`https://wa.me/919061381010?text=${encodeURIComponent(
+                  `Hello Nuvamed Diagnostics, I would like a quick quote for:\n${cart
+                    .map(
+                      (i, idx) =>
+                        `${idx + 1}. ${i.name} (Cat #${i.catNo}, Pack: ${i.packSize}) x ${i.quantity}`
+                    )
+                    .join("\n")}\nPlease share proforma and lead time.`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-[#25D366] hover:bg-[#20ba5a] text-white text-center font-bold py-2 px-4 rounded block text-xs shadow transition-colors flex items-center justify-center gap-1.5"
+              >
+                <span>💬 Quick Inquire on WhatsApp (+91 9061381010)</span>
+              </a>
             </div>
           )}
         </aside>

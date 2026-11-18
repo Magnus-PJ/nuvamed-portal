@@ -169,10 +169,16 @@ export default function CfdnaProductClient() {
                 <span>Add to Quote Request</span>
               </button>
 
-              <div className="bg-slate-100 text-slate-600 text-xs font-bold py-2.5 px-3 rounded border border-slate-200 whitespace-nowrap flex items-center gap-1.5 cursor-default">
-                <span>WhatsApp</span>
-                <span className="text-[10px] font-mono text-amber-800 bg-amber-100 px-1.5 py-0.5 rounded">Live Soon</span>
-              </div>
+              <a
+                href={`https://wa.me/919061381010?text=${encodeURIComponent(
+                  `Hello Nuvamed Diagnostics, I would like to inquire about MagDNA cf-DNA Purification Kit (Cat # L2057) - ${packSize}. Please provide INR proforma and delivery timeline.`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2.5 px-3 rounded shadow transition-colors whitespace-nowrap flex items-center gap-1.5"
+              >
+                <span>💬 WhatsApp (+91 9061381010)</span>
+              </a>
             </div>
             <p className="text-[11px] text-slate-500 mt-2">
               💳 Booking confirmed upon <strong>advance payment only</strong> (or institutional PO wherever necessary).

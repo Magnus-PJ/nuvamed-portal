@@ -21,8 +21,8 @@ export default function Footer() {
             </p>
             <div className="space-y-1 font-mono text-[11px] text-slate-300">
               <div>📍 Regional Logistics Hub: Kochi, Kerala, India</div>
-              <div>📧 Direct Procurement Desk: <a href="mailto:nuvameddx@gmail.com" className="text-teal-300 underline">nuvameddx@gmail.com</a></div>
-              <div>💬 WhatsApp Booking: <span className="text-amber-300 font-sans italic">Live Soon (Direct inquiries via email in the interim)</span></div>
+              <div>📧 Direct Procurement Desk: <a href="mailto:info@magnusdiagnostics.in" className="text-teal-300 underline">info@magnusdiagnostics.in</a></div>
+              <div>💬 WhatsApp Booking & Desk: <a href="https://wa.me/919061381010?text=Hello%20Nuvamed%20Diagnostics%2C%20I%20would%20like%20to%20inquire%20about%20products%20and%20pricing" target="_blank" rel="noopener noreferrer" className="text-emerald-300 hover:underline font-bold">+91 9061381010</a></div>
               <div className="text-teal-200/90 pt-1 font-sans text-xs">
                 💳 <strong>Payment Terms:</strong> Booking confirmed by <strong>Advance Payment only</strong> (or pre-approved Institutional Purchase Orders wherever necessary).
               </div>
@@ -111,11 +111,19 @@ export default function Footer() {
 
         <div className="flex flex-wrap justify-between items-center gap-3 pt-4 border-t border-white/10 text-slate-400 text-[11px]">
           <div>&copy; 2026 Nuvamed Diagnostics LLP Limited. All rights reserved. Regional Logistics Hub: Kochi, Kerala, India.</div>
-          <div className="flex gap-4">
+          <div className="flex gap-4 items-center">
             <Link href="/" className="hover:text-slate-200">Home</Link>
             <Link href="/products/cfdna-purification-kit" className="hover:text-slate-200">cfDNA Reagents</Link>
             <Link href="/quote-cart" className="hover:text-slate-200">Quote Portal</Link>
-            <a href="mailto:nuvameddx@gmail.com" className="hover:text-slate-200">nuvameddx@gmail.com</a>
+            <a href="mailto:info@magnusdiagnostics.in" className="hover:text-slate-200">info@magnusdiagnostics.in</a>
+            <a
+              href="https://wa.me/919061381010?text=Hello%20Nuvamed%20Diagnostics%2C%20I%20would%20like%20to%20inquire%20about%20products"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-emerald-300 hover:text-emerald-200 font-bold"
+            >
+              💬 WhatsApp: +91 9061381010
+            </a>
           </div>
         </div>
       </div>

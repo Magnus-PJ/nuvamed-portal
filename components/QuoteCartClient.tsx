@@ -8,6 +8,7 @@ export default function QuoteCartClient() {
   const { cart, removeItem, clearCart } = useCart();
   const [submitted, setSubmitted] = useState(false);
   const [rfqId, setRfqId] = useState("");
+  const [submittedItems, setSubmittedItems] = useState<typeof cart>([]);
   const [formData, setFormData] = useState({
     piName: "",
     institute: "",
@@ -30,39 +31,151 @@ export default function QuoteCartClient() {
     }
     const newId = `IN-RFQ-${Math.floor(100000 + Math.random() * 900000)}`;
     setRfqId(newId);
+    setSubmittedItems([...cart]);
     setSubmitted(true);
     clearCart();
   };
 
   if (submitted) {
+    const whatsappMessage = `*OFFICIAL INSTITUTIONAL RFQ - Nuvamed Diagnostics / Magnus Diagnostics*
+*Reference ID:* ${rfqId}
+
+*Principal Investigator:* Dr. ${formData.piName}
+*Institution:* ${formData.institute}
+*Department:* ${formData.department || "N/A"}
+*Email:* ${formData.email}
+*Phone:* ${formData.phone}
+*City:* ${formData.city} (PIN: ${formData.pincode})
+*GSTIN:* ${formData.gstin || "N/A (Provide 5% DSIR / 18% GST split)"}
+*Payment Terms:* Advance Payment (or Institutional PO)
+${formData.notes ? `*Notes:* ${formData.notes}\n` : ""}
+*Requested Products:*
+${submittedItems
+  .map(
+    (item, idx) =>
+      `${idx + 1}. ${item.name} [Cat #${item.catNo}] - Pack: ${item.packSize} - Qty: ${item.quantity}`
+  )
+  .join("\n")}
+
+Please generate our formal INR Proforma Invoice with HSN Code 3822 00 90 and confirm delivery timeline.`;
+
+    const whatsappUrl = `https://wa.me/919061381010?text=${encodeURIComponent(whatsappMessage)}`;
+
+    const emailSubject = `[Institutional RFQ ${rfqId}] Dr. ${formData.piName} - ${formData.institute}`;
+    const emailBody = `Dear Nuvamed / Magnus Diagnostics Procurement Team,
+
+Please generate an official INR Proforma Invoice with HSN Code 3822 00 90 and DSIR 5% Concessional GST split for our institution.
+
+Reference ID: ${rfqId}
+Principal Investigator / Scientist: Dr. ${formData.piName}
+Institute: ${formData.institute}
+Department: ${formData.department || "N/A"}
+Official Email: ${formData.email}
+WhatsApp / Phone: ${formData.phone}
+City & PIN: ${formData.city} - ${formData.pincode}
+GSTIN: ${formData.gstin || "N/A"}
+Procurement & Payment Terms: Advance Payment (or Institutional PO)
+Special Notes: ${formData.notes || "None"}
+
+Requested Items:
+${submittedItems
+  .map(
+    (item, idx) =>
+      `- ${item.name} | Cat #${item.catNo} | Pack Size: ${item.packSize} | Quantity: ${item.quantity}`
+  )
+  .join("\n")}
+
+Thank you.`;
+
+    const mailtoUrl = `mailto:info@magnusdiagnostics.in?subject=${encodeURIComponent(
+      emailSubject
+    )}&body=${encodeURIComponent(emailBody)}`;
+
     return (
       <div className="max-w-3xl mx-auto px-4 py-16 text-center">
-        <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto mb-4 font-black text-2xl">
+        <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto mb-4 font-black text-2xl shadow-sm">
           ✓
         </div>
         <h1 className="text-2xl sm:text-3xl font-extrabold text-primary mb-2">
-          Official Institutional RFQ Received
+          Official Institutional RFQ Registered
         </h1>
         <p className="text-sm text-slate-600 mb-6 max-w-lg mx-auto">
           Thank you, <strong>Dr. {formData.piName}</strong> ({formData.institute}). Your formal quotation inquiry has been registered under Reference ID:
         </p>
 
-        <div className="bg-slate-100 border border-slate-300 font-mono text-lg font-bold text-primary py-2 px-4 rounded inline-block mb-6">
+        <div className="bg-slate-100 border border-slate-300 font-mono text-lg font-bold text-primary py-2 px-6 rounded-lg inline-block mb-6 shadow-inner">
           {rfqId}
         </div>
 
-        <div className="bg-white border border-slate-200 rounded-lg p-6 max-w-xl mx-auto text-left text-xs space-y-3 mb-8 shadow-sm">
-          <div className="font-bold text-primary text-sm border-b border-slate-100 pb-2">
-            SLA Commitment: 4 Working Hours &bull; Nuvamed Diagnostics Desk
+        {/* 1-Click Dispatch Action Cards */}
+        <div className="bg-gradient-to-br from-slate-50 to-emerald-50/40 border border-emerald-200/80 rounded-xl p-6 max-w-xl mx-auto text-left mb-6 shadow-sm">
+          <div className="font-extrabold text-[#0b1d33] text-sm mb-2 flex items-center gap-2">
+            <span>⚡ Instant Priority Dispatch to Procurement Desk</span>
+            <span className="text-[10px] font-mono bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-bold">
+              4-Hour SLA
+            </span>
           </div>
-          <p className="text-slate-600">
-            An official Proforma Invoice PDF in Indian Rupees (INR) with itemized unit pricing, HSN Code 3822 00 90, DSIR 5% Concessional GST split, and delivery timeline will be dispatched to <strong>{formData.email}</strong>, with a copy routed to the procurement desk at <strong>nuvameddx@gmail.com</strong>.
+          <p className="text-xs text-slate-600 mb-4 leading-relaxed">
+            Click below to instantly transmit your itemized quote request directly to our procurement team via official WhatsApp or Email:
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-3">
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs font-extrabold py-3 px-4 rounded-lg shadow transition-all flex items-center justify-center gap-2"
+            >
+              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.84.5 3.56 1.37 5.04L2 22l5.12-1.34c1.43.78 3.06 1.22 4.92 1.22 5.52 0 10-4.48 10-10s-4.48-10-10-10zm0 18.27c-1.6 0-3.08-.43-4.37-1.18l-.31-.18-3.25.85.87-3.17-.2-.33a8.214 8.214 0 0 1-1.27-4.46c0-4.56 3.71-8.27 8.27-8.27 4.56 0 8.27 3.71 8.27 8.27 0 4.56-3.71 8.27-8.27 8.27zm4.53-6.2c-.25-.13-1.48-.73-1.71-.81-.23-.08-.39-.13-.56.13-.17.25-.65.81-.8 1-.15.19-.3.21-.55.08-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.02 2.61c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.48-.6 1.69-1.19.21-.58.21-1.08.15-1.19-.06-.11-.22-.17-.47-.3z" />
+              </svg>
+              <span>Transmit to WhatsApp (+91 9061381010)</span>
+            </a>
+
+            <a
+              href={mailtoUrl}
+              className="flex-1 bg-[#0b1d33] hover:bg-[#143152] text-white text-xs font-extrabold py-3 px-4 rounded-lg shadow transition-all flex items-center justify-center gap-2"
+            >
+              <span>📧 Send via Email (info@magnusdiagnostics.in)</span>
+            </a>
+          </div>
+        </div>
+
+        {/* Itemized Reagent Summary */}
+        {submittedItems.length > 0 && (
+          <div className="bg-white border border-slate-200 rounded-lg p-5 max-w-xl mx-auto text-left text-xs mb-6 shadow-sm">
+            <div className="font-bold text-primary text-xs pb-2 border-b border-slate-100 flex justify-between">
+              <span>Itemized Reagent Manifest ({submittedItems.length} items)</span>
+              <span className="font-mono text-emerald-700">HSN: 3822 00 90</span>
+            </div>
+            <ul className="divide-y divide-slate-100 mt-2">
+              {submittedItems.map((item, idx) => (
+                <li key={idx} className="py-2 flex justify-between items-center text-xs">
+                  <div>
+                    <span className="font-bold text-slate-800">{item.name}</span>
+                    <span className="text-[11px] text-slate-500 font-mono block">
+                      Cat #{item.catNo} &bull; Pack: {item.packSize}
+                    </span>
+                  </div>
+                  <span className="font-mono font-bold bg-slate-100 px-2 py-0.5 rounded text-slate-700">
+                    Qty: {item.quantity}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* Official Terms & Notice */}
+        <div className="bg-white border border-slate-200 rounded-lg p-5 max-w-xl mx-auto text-left text-xs space-y-2 mb-8 shadow-sm">
+          <p className="text-slate-600 leading-relaxed">
+            An official Proforma Invoice PDF in Indian Rupees (INR) with itemized unit pricing, HSN Code 3822 00 90, DSIR 5% Concessional GST split, and delivery timeline is queued for dispatch to <strong>{formData.email}</strong> with copy to <strong>info@magnusdiagnostics.in</strong>.
           </p>
           <div className="text-[11px] text-slate-500 pt-1">
             Documentation included: Authorized Distributor Undertaking by Nuvamed Diagnostics LLP Limited &bull; Lot-Specific COA &bull; Safety Data Sheet (SDS).
           </div>
           <div className="bg-amber-50 border border-amber-200 text-amber-900 rounded p-2.5 text-[11px] leading-relaxed">
-            <strong>💳 Order Fulfillment Notice:</strong> Order booking & lot allocation are confirmed upon <strong>Advance Payment only</strong> (or official Institutional Purchase Order wherever necessary and pre-approved). Direct WhatsApp-based booking & tracking will be live soon.
+            <strong>💳 Order Fulfillment Notice:</strong> Order booking & lot allocation are confirmed upon <strong>Advance Payment only</strong> (or official Institutional Purchase Order wherever necessary and pre-approved).
           </div>
         </div>
 
@@ -73,12 +186,12 @@ export default function QuoteCartClient() {
           >
             Return to Product Catalog
           </Link>
-          <a
-            href="mailto:nuvameddx@gmail.com?subject=Urgent%20RFQ%20Confirmation%20-%20Nuvamed%20Diagnostics"
-            className="bg-slate-800 hover:bg-slate-900 text-white text-xs font-bold py-2.5 px-5 rounded transition-colors flex items-center gap-1.5"
+          <Link
+            href="/elisa-finder"
+            className="bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold py-2.5 px-5 rounded border border-slate-200 transition-colors"
           >
-            <span>Email Procurement Desk</span>
-          </a>
+            Browse ELISA Library
+          </Link>
         </div>
       </div>
     );
@@ -367,21 +480,29 @@ export default function QuoteCartClient() {
             </div>
           </div>
 
-          <div className="pt-4 border-t border-slate-200">
+          <div className="pt-4 border-t border-slate-200 space-y-3">
             <div className="flex items-center justify-between mb-1">
               <h4 className="font-bold text-xs text-primary">Direct Procurement Desk</h4>
-              <span className="font-mono text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-bold">
-                WhatsApp Live Soon
+              <span className="font-mono text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-bold">
+                WhatsApp Active
               </span>
             </div>
-            <p className="text-slate-500 text-[11px] mb-3 leading-relaxed">
-              Booking confirmed by <strong>Advance Payment only</strong> (or institutional PO whenever necessary). Direct WhatsApp booking will be live soon; please route immediate inquiries to our email desk.
+            <p className="text-slate-500 text-[11px] leading-relaxed">
+              Booking confirmed by <strong>Advance Payment only</strong> (or institutional PO whenever necessary). Direct inquiries can be routed via WhatsApp or Email:
             </p>
             <a
-              href="mailto:nuvameddx@gmail.com?subject=Urgent%20Institutional%20Quote%20Assistance"
+              href="https://wa.me/919061381010?text=Hello%20Nuvamed%20Diagnostics%2C%20I%20would%20like%20to%20inquire%20about%20products%2C%20pricing%20and%20institutional%20quotations."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold py-2.5 px-3 rounded block text-center transition-colors text-xs flex items-center justify-center gap-1.5 shadow-sm"
+            >
+              <span>💬 WhatsApp: +91 9061381010</span>
+            </a>
+            <a
+              href="mailto:info@magnusdiagnostics.in?subject=Urgent%20Institutional%20Quote%20Assistance"
               className="w-full bg-[#0b1d33] hover:bg-[#143152] text-white font-bold py-2.5 px-3 rounded block text-center transition-colors text-xs"
             >
-              Contact Desk: nuvameddx@gmail.com
+              Contact Desk: info@magnusdiagnostics.in
             </a>
           </div>
         </div>

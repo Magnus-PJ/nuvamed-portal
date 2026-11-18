@@ -42,15 +42,20 @@ export default function Header() {
               GeM Registered
             </span>
             <a
-              href="mailto:nuvameddx@gmail.com"
+              href="mailto:info@magnusdiagnostics.in"
               className="text-slate-200 hover:text-white font-medium flex items-center gap-1 transition-colors"
             >
-              <span>nuvameddx@gmail.com</span>
+              <span>info@magnusdiagnostics.in</span>
             </a>
             <span className="text-slate-600">&bull;</span>
-            <span className="font-mono text-amber-300 bg-amber-950/70 border border-amber-800/80 px-2 py-0.5 rounded text-[11px]">
-              WhatsApp Booking: Live Soon
-            </span>
+            <a
+              href="https://wa.me/919061381010?text=Hello%20Nuvamed%20Diagnostics%2C%20I%20would%20like%20to%20inquire%20about%20products%20and%20pricing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-emerald-300 bg-emerald-950/80 border border-emerald-700/80 hover:bg-emerald-900 px-2 py-0.5 rounded text-[11px] flex items-center gap-1 transition-colors"
+            >
+              <span>💬 WhatsApp: +91 9061381010</span>
+            </a>
             <span className="text-slate-600 hidden xl:inline">&bull;</span>
             <span className="hidden xl:inline text-slate-300 text-[11px]">Advance Payment Only / PO Wherever Necessary</span>
           </div>
@@ -83,18 +88,20 @@ export default function Header() {
           {/* Header Action Buttons */}
           <div className="flex items-center gap-2 sm:gap-3">
             <a
-              href="mailto:nuvameddx@gmail.com?subject=Product%20Inquiry%20-%20Nuvamed%20Diagnostics"
+              href="mailto:info@magnusdiagnostics.in?subject=Product%20Inquiry%20-%20Nuvamed%20Diagnostics"
               className="hidden lg:inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-200 px-3 py-2 rounded-lg transition-colors"
             >
               <span>Email Desk</span>
             </a>
 
-            <div className="hidden lg:inline-flex items-center gap-1.5 text-xs font-bold text-slate-600 bg-slate-50 border border-slate-200 px-3 py-2 rounded-lg cursor-default">
-              <span>WhatsApp Desk</span>
-              <span className="font-mono text-[10px] bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded font-bold">
-                Live Soon
-              </span>
-            </div>
+            <a
+              href="https://wa.me/919061381010?text=Hello%20Nuvamed%20Diagnostics%2C%20I%20would%20like%20to%20inquire%20about%20products%20and%20pricing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden lg:inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 px-3 py-2 rounded-lg transition-colors"
+            >
+              <span>💬 WhatsApp (+91 9061381010)</span>
+            </a>
 
             <button
               onClick={() => setDrawerOpen(true)}

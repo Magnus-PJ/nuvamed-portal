@@ -201,7 +201,7 @@ export default function HomePage() {
                   Generate Official Proforma Invoice
                 </button>
                 <p className="text-[11px] text-slate-500 text-center leading-relaxed">
-                  🔒 Booking by <strong>Advance Payment only</strong> (or pre-approved Institutional PO wherever necessary) &bull; Concessional 5% DSIR / 18% Compliant Billing &bull; WhatsApp Booking Live Soon.
+                  🔒 Booking by <strong>Advance Payment only</strong> (or pre-approved Institutional PO wherever necessary) &bull; Concessional 5% DSIR / 18% Compliant Billing &bull; WhatsApp Desk: <strong>+91 9061381010</strong>.
                 </p>
               </form>
             </div>
