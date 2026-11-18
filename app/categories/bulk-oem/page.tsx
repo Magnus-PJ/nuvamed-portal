@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Bulk Reagents, Kerala Custom Kitting & Contract Services | Nuvamed",
+  title: "Bulk Diagnostic Reagents & OEM Kitting | India | Nuvamed",
   description:
-    "Direct OEM bulk magnetic beads, custom diagnostic kitting assembled at our Kerala facility, Make-in-India tender compliance, and contract biomanufacturing. 4-hour quotes from Nuvamed Diagnostics.",
+    "Direct OEM bulk magnetic beads, custom buffer filling, and private labeling at our Kochi logistics hub. HSN 3822 00 90. Request institutional pricing.",
   keywords: [
     "bulk magnetic beads India",
     "custom diagnostic kitting Kerala",
@@ -17,10 +17,24 @@ export const metadata: Metadata = {
     canonical: "https://www.nuvamed.co.in/categories/bulk-oem",
   },
   openGraph: {
-    title: "Bulk Reagents, Kerala Custom Kitting & Contract Services | Nuvamed",
+    title: "Bulk Diagnostic Reagents & OEM Kitting | India | Nuvamed",
     description: "Industrial bulk reagents, Make-in-India domestic kit assembly, and contract biomanufacturing. Authorized distribution by Nuvamed Diagnostics LLP Limited.",
     url: "https://www.nuvamed.co.in/categories/bulk-oem",
     type: "website",
+    images: [
+      {
+        url: "https://www.nuvamed.co.in/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Bulk Diagnostic Reagents & OEM Kitting",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bulk Diagnostic Reagents & OEM Kitting | India | Nuvamed",
+    description: "OEM bulk magnetic beads, custom diagnostic kitting, and contract biomanufacturing in India. HSN 3822 00 90.",
+    images: ["https://www.nuvamed.co.in/opengraph-image"],
   },
 };
 

@@ -18,9 +18,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nuvamed Diagnostics | Luminous BioSciences India Channel | cfDNA, Exosome & Mycoplasma Kits",
+  title: "Nuvamed Diagnostics | Luminous BioSciences India Channel",
   description:
-    "Direct authorized supply channel by Nuvamed Diagnostics LLP Limited for US-manufactured Luminous BioSciences products in India. MagDNA cfDNA kits, exosome isolation reagents, universal mycoplasma qPCR, and 13,000+ ELISA kits. Delivery across India with lot COA, HSN 3822 00 90, and DSIR 5% GST.",
+    "Authorized India channel for US-manufactured cfDNA, exosome & mycoplasma kits. 4-hour INR proforma invoices, lot COA, HSN 3822 00 90, and DSIR 5% GST.",
   keywords: [
     "Nuvamed Diagnostics",
     "Nuvamed Diagnostics LLP Limited",
@@ -36,17 +36,28 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Nuvamed Diagnostics | Luminous BioSciences India Reagents & Kits",
-    description: "US-manufactured kits delivered across India in 2–3 weeks by Nuvamed Diagnostics LLP Limited. Official GST proforma invoices in 4 hours.",
+    title: "Nuvamed Diagnostics | Luminous BioSciences India Channel",
+    description:
+      "US-manufactured cfDNA, exosome & mycoplasma kits delivered across India in 2–3 weeks. Official INR proforma invoices in 4 hours.",
     url: "https://www.nuvamed.co.in",
     siteName: "Nuvamed Diagnostics LLP Limited",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "https://www.nuvamed.co.in/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Nuvamed Diagnostics - Luminous BioSciences India",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nuvamed Diagnostics | Luminous BioSciences India Reagents & Kits",
-    description: "Authorized India supply channel by Nuvamed Diagnostics LLP Limited for US-manufactured cfDNA, exosome, and mycoplasma testing kits.",
+    title: "Nuvamed Diagnostics | Luminous BioSciences India Channel",
+    description:
+      "Authorized India channel for US-manufactured cfDNA, exosome & mycoplasma kits. 4-hour INR proforma invoices.",
+    images: ["https://www.nuvamed.co.in/opengraph-image"],
   },
   robots: {
     index: true,
@@ -59,6 +70,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    google: "google01eca5e70f81eded",
+  },
 };
 
 const organizationJsonLd = {
@@ -69,6 +83,7 @@ const organizationJsonLd = {
       "@id": "https://www.nuvamed.co.in/#organization",
       name: "Nuvamed Diagnostics LLP Limited",
       url: "https://www.nuvamed.co.in",
+      logo: "https://www.nuvamed.co.in/icon",
       email: "info@magnusdiagnostics.in",
       telephone: "+91-9061381010",
       contactPoint: [

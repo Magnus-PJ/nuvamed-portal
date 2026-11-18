@@ -1,0 +1,79 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 1846 >>
+stream
+BT
+/F1 20 Tf
+50 750 Td
+(Certificate of Analysis (COA) - MagDNA cf-DNA Kit) Tj
+/F1 12 Tf
+0 -25 Td
+(Lot # L2057-26B04 | Expiry: 2028-04 | HSN: 3822 00 90) Tj
+/F1 10 Tf
+0 -25 Td
+(Organization: Nuvamed Diagnostics LLP Limited | Logistics Hub: Kochi, Kerala) Tj
+0 -15 Td
+(Contact: info@magnusdiagnostics.in | WhatsApp Desk: +91 9061381010 | HSN: 3822 00 90) Tj
+0 -25 Td
+(-----------------------------------------------------------------------------------------------------) Tj
+/F1 9 Tf
+0 -20 Td
+(QUALITY CONTROL RELEASE SUMMARY & ANALYTICAL TEST REPORT) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(PARAMETER                          SPECIFICATION                LOT RESULT     STATUS) Tj
+0 -14 Td
+(-------------------------------------------------------------------------------------------) Tj
+0 -14 Td
+(Bead Sizing & Polydispersity       1.0 uM \(+/- 0.1 uM\)          1.02 uM        PASSED) Tj
+0 -14 Td
+(cfDNA Recovery Rate \(167 bp\)       > 85% recovery from plasma   91.4% recovery PASSED) Tj
+0 -14 Td
+(High Molecular Weight DNA Carry    < 5% gDNA contamination      1.8% gDNA      PASSED) Tj
+0 -14 Td
+(Bioanalyzer 2100 Electropherogram  Sharp mononucleosomal peak   167 bp peak    PASSED) Tj
+0 -14 Td
+(Residual Endonuclease Activity     Undetectable \(<0.001 U/uL\)   Negative       PASSED) Tj
+0 -14 Td
+(RNase Contamination                Undetectable                 Negative       PASSED) Tj
+0 -14 Td
+(Lot Formulation Consistency \(CV\)   < 4.5% inter-batch variation 2.8% CV        PASSED) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(RELEASE CERTIFICATION & AUTHORIZED SIGNATURE) Tj
+0 -14 Td
+(This lot has been manufactured under ISO 9001:2015 and ISO 13485:2016 audited quality systems.) Tj
+0 -14 Td
+(Inspected and Approved by Quality Assurance Desk: Nuvamed Diagnostics LLP Limited & Luminous BioSciences.) Tj
+0 -14 Td
+(Regional Logistics Hub: Kochi, Kerala, India.) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2209
+%%EOF

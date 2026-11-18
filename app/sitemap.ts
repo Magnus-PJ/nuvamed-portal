@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { TOP_ELISA_TARGETS } from "@/lib/elisaData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.nuvamed.co.in";
@@ -78,5 +79,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  return staticRoutes;
+  const elisaRoutes = TOP_ELISA_TARGETS.map((target) => ({
+    url: `${baseUrl}/elisa/${target.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.85,
+  }));
+
+  return [...staticRoutes, ...elisaRoutes];
 }

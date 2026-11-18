@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import CultureMediaClient from "@/components/CultureMediaClient";
 
 export const metadata: Metadata = {
-  title: "NK Cell, CIK & GMP Stem Cell Culture Media | India Distributor | Nuvamed",
+  title: "NK Cell, CIK & Stem Cell Culture Media | India | Nuvamed",
   description:
-    "Serum-free NK Cell kits (LNC0102/4, 2000 mL), CIK expansion media, GMP MSC media, HEK293 lentivirus packaging media, and DMSO-free vitrified freezing media. HSN 3821 00 00 / 3822 00 90, 5% DSIR GST.",
+    "Serum-free NK Cell expansion kits (2000 mL), CIK media, and GMP mesenchymal stem cell reagents. HSN 3822 00 90. Request official 4-hour INR proforma.",
   keywords: [
     "NK cell culture kit India",
     "serum free NK media price",
@@ -18,10 +18,24 @@ export const metadata: Metadata = {
     canonical: "https://www.nuvamed.co.in/categories/culture-media",
   },
   openGraph: {
-    title: "NK Cell, CIK & GMP Stem Cell Culture Media | India Distribution Channel",
+    title: "NK Cell, CIK & Stem Cell Culture Media | India | Nuvamed",
     description: "Serum-free and GMP-grade media for immune cell therapy expansion and stem cell derivation. Authorized distribution by Nuvamed Diagnostics LLP Limited.",
     url: "https://www.nuvamed.co.in/categories/culture-media",
     type: "website",
+    images: [
+      {
+        url: "https://www.nuvamed.co.in/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "NK Cell, CIK & GMP Stem Cell Culture Media",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NK Cell, CIK & Stem Cell Culture Media | India | Nuvamed",
+    description: "Serum-free NK cell expansion media and GMP stem cell reagents in India. HSN 3822 00 90.",
+    images: ["https://www.nuvamed.co.in/opengraph-image"],
   },
 };
 

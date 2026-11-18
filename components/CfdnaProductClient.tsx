@@ -231,6 +231,57 @@ export default function CfdnaProductClient() {
         </button>
       </div>
 
+      {/* Official Downloadable Documents Bar (Permanent SSR for Search Crawlers & Researchers) */}
+      <div className="bg-gradient-to-r from-[#0b1d33] to-[#143152] text-white rounded-xl p-5 mb-8 shadow-sm">
+        <div className="flex flex-wrap justify-between items-center gap-3 mb-3">
+          <div>
+            <h2 className="text-sm sm:text-base font-extrabold text-white">
+              Official Quality Assurance & Regulatory PDF Downloads
+            </h2>
+            <p className="text-xs text-slate-300">
+              Download lot testing certificates, safety sheets, and DSIR 5% GST exemption paperwork for Indian academic audit compliance:
+            </p>
+          </div>
+          <span className="font-mono text-[10px] bg-teal-900/80 border border-teal-500/50 text-teal-300 px-2 py-0.5 rounded font-bold">
+            HSN: 3822 00 90
+          </span>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2.5 text-xs">
+          <a
+            href="/docs/magdna-cfdna-manual-protocol.pdf"
+            download
+            className="bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg p-2.5 text-left transition-all block group"
+          >
+            <span className="font-bold text-white block group-hover:text-teal-300">📄 Protocol Manual</span>
+            <span className="text-[10px] text-slate-300">MagDNA 45-min Extraction</span>
+          </a>
+          <a
+            href="/docs/sample-certificate-of-analysis-coa.pdf"
+            download
+            className="bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg p-2.5 text-left transition-all block group"
+          >
+            <span className="font-bold text-white block group-hover:text-teal-300">🔬 Sample COA</span>
+            <span className="text-[10px] text-slate-300">Bioanalyzer 167 bp QC Trace</span>
+          </a>
+          <a
+            href="/docs/ghs-material-safety-data-sheet-sds.pdf"
+            download
+            className="bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg p-2.5 text-left transition-all block group"
+          >
+            <span className="font-bold text-white block group-hover:text-teal-300">🛡️ Safety Sheet (SDS)</span>
+            <span className="text-[10px] text-slate-300">GHS & REACH Non-Toxic</span>
+          </a>
+          <a
+            href="/docs/dsir-5-percent-gst-undertaking-form.pdf"
+            download
+            className="bg-emerald-900/60 hover:bg-emerald-900/90 border border-emerald-500/50 rounded-lg p-2.5 text-left transition-all block group"
+          >
+            <span className="font-bold text-emerald-300 block group-hover:text-white">🏛️ DSIR 5% GST Form</span>
+            <span className="text-[10px] text-emerald-200">Exemption Template</span>
+          </a>
+        </div>
+      </div>
+
       {/* Technical Tabs */}
       <div className="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm">
         <div className="flex border-b border-slate-200 bg-slate-50 overflow-x-auto text-xs font-bold text-slate-600">
@@ -374,22 +425,68 @@ export default function CfdnaProductClient() {
           )}
 
           {activeTab === "docs" && (
-            <div className="space-y-3">
-              <h3 className="text-base font-extrabold text-primary">Technical Documentation & Downloads</h3>
+            <div className="space-y-4">
+              <div className="flex justify-between items-center">
+                <h3 className="text-base font-extrabold text-primary">Technical Documentation & Official Regulatory Downloads</h3>
+                <span className="font-mono text-[10px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-bold">
+                  PDF 1.4 Compliant
+                </span>
+              </div>
+              <p className="text-xs text-slate-600">
+                Download verified technical specifications, lot-release test criteria, safety classifications, and official DSIR 5% GST exemption undertaking formats directly for institutional procurement files:
+              </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                <div className="border border-slate-200 rounded p-3 flex justify-between items-center">
+                <div className="border border-slate-200 rounded-lg p-3.5 bg-slate-50/50 flex justify-between items-center hover:border-accent transition-colors">
                   <div>
-                    <strong className="text-primary block">Lot-Specific Certificate of Analysis (COA)</strong>
-                    <span className="text-slate-500">Sample COA template · QC verified per batch</span>
+                    <strong className="text-primary block font-bold">MagDNA Extraction Protocol Manual</strong>
+                    <span className="text-slate-500 text-[11px]">Step-by-step 45-min workflow (0.5–5.0 mL plasma)</span>
                   </div>
-                  <Link href="/quote-cart" className="text-accent font-bold">Request PDF &rarr;</Link>
+                  <a
+                    href="/docs/magdna-cfdna-manual-protocol.pdf"
+                    download
+                    className="bg-accent hover:bg-accent-hover text-white text-[11px] font-bold py-1.5 px-3 rounded shadow-sm transition-colors whitespace-nowrap"
+                  >
+                    Download PDF
+                  </a>
                 </div>
-                <div className="border border-slate-200 rounded p-3 flex justify-between items-center">
+                <div className="border border-slate-200 rounded-lg p-3.5 bg-slate-50/50 flex justify-between items-center hover:border-accent transition-colors">
                   <div>
-                    <strong className="text-primary block">Safety Data Sheet (GHS-SDS)</strong>
-                    <span className="text-slate-500">OSHA / European Reach chemical classification</span>
+                    <strong className="text-primary block font-bold">Sample Certificate of Analysis (COA)</strong>
+                    <span className="text-slate-500 text-[11px]">Bioanalyzer 167 bp trace & lot purity metrics</span>
                   </div>
-                  <Link href="/quote-cart" className="text-accent font-bold">Request PDF &rarr;</Link>
+                  <a
+                    href="/docs/sample-certificate-of-analysis-coa.pdf"
+                    download
+                    className="bg-accent hover:bg-accent-hover text-white text-[11px] font-bold py-1.5 px-3 rounded shadow-sm transition-colors whitespace-nowrap"
+                  >
+                    Download PDF
+                  </a>
+                </div>
+                <div className="border border-slate-200 rounded-lg p-3.5 bg-slate-50/50 flex justify-between items-center hover:border-accent transition-colors">
+                  <div>
+                    <strong className="text-primary block font-bold">Safety Data Sheet (GHS-SDS)</strong>
+                    <span className="text-slate-500 text-[11px]">Indian GHS & European REACH compliant</span>
+                  </div>
+                  <a
+                    href="/docs/ghs-material-safety-data-sheet-sds.pdf"
+                    download
+                    className="bg-accent hover:bg-accent-hover text-white text-[11px] font-bold py-1.5 px-3 rounded shadow-sm transition-colors whitespace-nowrap"
+                  >
+                    Download PDF
+                  </a>
+                </div>
+                <div className="border border-slate-200 rounded-lg p-3.5 bg-slate-50/50 flex justify-between items-center hover:border-accent transition-colors">
+                  <div>
+                    <strong className="text-primary block font-bold">DSIR 5% GST Undertaking Template</strong>
+                    <span className="text-slate-500 text-[11px]">Ministry Notification 47/2017 Format</span>
+                  </div>
+                  <a
+                    href="/docs/dsir-5-percent-gst-undertaking-form.pdf"
+                    download
+                    className="bg-emerald-700 hover:bg-emerald-800 text-white text-[11px] font-bold py-1.5 px-3 rounded shadow-sm transition-colors whitespace-nowrap"
+                  >
+                    Download PDF
+                  </a>
                 </div>
               </div>
             </div>

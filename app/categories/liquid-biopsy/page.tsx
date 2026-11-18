@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import LiquidBiopsyClient from "@/components/LiquidBiopsyClient";
 
 export const metadata: Metadata = {
-  title: "Liquid Biopsy, cfDNA Purification & NGS Size Selection Reagents India | Nuvamed",
+  title: "Liquid Biopsy & cfDNA Reagents India | Nuvamed",
   description:
-    "Superparamagnetic SPRI bead kits for 167 bp cfDNA extraction from plasma, NGS library size selection (L2059), and PCR cleanup. HSN 3822 00 90, 5% DSIR GST. Official quotes in 4 hours.",
+    "Magnetic bead cfDNA extraction kits and NGS size selection reagents for oncology R&D in India. HSN 3822 00 90, DSIR 5% GST, and 4-hour proforma invoice SLA.",
   keywords: [
     "liquid biopsy kits India",
     "cfDNA extraction kit price",
@@ -17,10 +17,24 @@ export const metadata: Metadata = {
     canonical: "https://www.nuvamed.co.in/categories/liquid-biopsy",
   },
   openGraph: {
-    title: "Liquid Biopsy, cfDNA Purification & NGS Size Selection Reagents India",
+    title: "Liquid Biopsy & cfDNA Reagents India | Nuvamed Diagnostics",
     description: "Selective 167 bp cfDNA fragment recovery with ~75% cost savings vs imported spin columns. Authorized distribution by Nuvamed Diagnostics LLP Limited.",
     url: "https://www.nuvamed.co.in/categories/liquid-biopsy",
     type: "website",
+    images: [
+      {
+        url: "https://www.nuvamed.co.in/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Liquid Biopsy & cfDNA Reagents India",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Liquid Biopsy & cfDNA Reagents India | Nuvamed Diagnostics",
+    description: "Magnetic bead cfDNA extraction kits and NGS size selection reagents for oncology R&D in India. HSN 3822 00 90.",
+    images: ["https://www.nuvamed.co.in/opengraph-image"],
   },
 };
 

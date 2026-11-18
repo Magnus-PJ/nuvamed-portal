@@ -452,7 +452,7 @@ export default function GlobalSearch() {
           onFocus={() => setIsOpen(true)}
           onKeyDown={handleKeyDown}
           placeholder="Search cfDNA, Exosomes, Media, Cat # (L2057, E103) or 13,000+ ELISA targets..."
-          className="w-full text-xs py-2 pl-3.5 pr-20 border border-slate-200 rounded-lg focus:outline-none focus:border-accent bg-slate-50/70 focus:bg-white transition-all shadow-inner"
+          className="w-full text-base sm:text-xs py-2 pl-3.5 pr-20 border border-slate-200 rounded-lg focus:outline-none focus:border-accent bg-slate-50/70 focus:bg-white transition-all shadow-inner"
         />
 
         {query.length > 0 ? (

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import QuoteCartClient from "@/components/QuoteCartClient";
 
 export const metadata: Metadata = {
-  title: "Institutional RFQ & Official Proforma Invoice Generator | Nuvamed Diagnostics",
+  title: "Institutional Quote & Proforma Generator | Nuvamed",
   description:
-    "Generate official formal INR proforma quotes with HSN Code 3822 00 90, DSIR 5% Concessional GST calculation, 4-hour turnaround SLA, and lot-matched COA. Nuvamed Diagnostics LLP Limited.",
+    "Generate formal INR proforma quotes with HSN 3822 00 90, DSIR 5% GST split, and 4-hour SLA. Advance payment only or approved institutional PO.",
   keywords: [
     "institutional quote request life sciences India",
     "DSIR 5% GST proforma invoice",
@@ -16,10 +16,24 @@ export const metadata: Metadata = {
     canonical: "https://www.nuvamed.co.in/quote-cart",
   },
   openGraph: {
-    title: "Institutional RFQ & Official Proforma Invoice Generator | Nuvamed Diagnostics",
+    title: "Institutional Quote & Proforma Generator | Nuvamed",
     description: "Official INR proforma quotes in 4 business hours for Indian academic, healthcare, and biopharma laboratories.",
     url: "https://www.nuvamed.co.in/quote-cart",
     type: "website",
+    images: [
+      {
+        url: "https://www.nuvamed.co.in/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Institutional RFQ & Official Proforma Invoice Generator",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Institutional Quote & Proforma Generator | Nuvamed",
+    description: "Generate formal INR proforma quotes with HSN 3822 00 90 and DSIR 5% GST in 4 hours.",
+    images: ["https://www.nuvamed.co.in/opengraph-image"],
   },
 };
 

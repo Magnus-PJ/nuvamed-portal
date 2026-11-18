@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import CellTherapyClient from "@/components/CellTherapyClient";
 
 export const metadata: Metadata = {
-  title: "Cell Therapy Tools, MSC Differentiation & Dissociation Enzymes | India | Nuvamed",
+  title: "Cell Therapy & MSC Reagents India | Nuvamed",
   description:
-    "Mesenchymal stem cell differentiation kits (osteogenic, adipogenic), recombinant gentle dissociation enzyme (LNC1004), and TC-treated plastics. HSN 3822 00 90, 5% DSIR GST.",
+    "Mesenchymal stem cell differentiation kits, recombinant dissociation enzymes, and cell cryopreservation tools. HSN 3822 00 90, 4-hour quote guarantee.",
   keywords: [
     "cell therapy reagents India",
     "MSC osteogenic differentiation kit",
@@ -17,10 +17,24 @@ export const metadata: Metadata = {
     canonical: "https://www.nuvamed.co.in/categories/cell-therapy",
   },
   openGraph: {
-    title: "Cell Therapy & Stem Cell Research Tools | India Distribution Channel",
+    title: "Cell Therapy & MSC Differentiation Tools | India | Nuvamed",
     description: "Reagents for regenerative medicine, non-animal cell dissociation, and tri-lineage differentiation. Authorized distribution by Nuvamed Diagnostics LLP Limited.",
     url: "https://www.nuvamed.co.in/categories/cell-therapy",
     type: "website",
+    images: [
+      {
+        url: "https://www.nuvamed.co.in/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Cell Therapy & Stem Cell Research Tools",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cell Therapy & MSC Differentiation Tools | India | Nuvamed",
+    description: "MSC differentiation kits and non-animal dissociation reagents in India. HSN 3822 00 90.",
+    images: ["https://www.nuvamed.co.in/opengraph-image"],
   },
 };
 

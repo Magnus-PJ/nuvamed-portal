@@ -303,7 +303,7 @@ Thank you.`;
                     value={formData.piName}
                     onChange={(e) => setFormData({ ...formData, piName: e.target.value })}
                     placeholder="Dr. Anita Sharma"
-                    className="w-full p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none"
+                    className="w-full text-base sm:text-xs p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none"
                   />
                 </div>
                 <div>
@@ -316,7 +316,7 @@ Thank you.`;
                     value={formData.institute}
                     onChange={(e) => setFormData({ ...formData, institute: e.target.value })}
                     placeholder="e.g. AIIMS New Delhi / IISc / RGCB"
-                    className="w-full p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none"
+                    className="w-full text-base sm:text-xs p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none"
                   />
                 </div>
               </div>
@@ -329,7 +329,7 @@ Thank you.`;
                     value={formData.department}
                     onChange={(e) => setFormData({ ...formData, department: e.target.value })}
                     placeholder="Dept of Biotechnology / Genomics Core"
-                    className="w-full p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none"
+                    className="w-full text-base sm:text-xs p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none"
                   />
                 </div>
                 <div>
@@ -337,7 +337,7 @@ Thank you.`;
                   <select
                     value={formData.funding}
                     onChange={(e) => setFormData({ ...formData, funding: e.target.value })}
-                    className="w-full p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none bg-white"
+                    className="w-full text-base sm:text-xs p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none bg-white"
                   >
                     <option value="grant">Extramural Grant (DBT / SERB / ICMR / CSIR)</option>
                     <option value="core">Institute Core Budget</option>
@@ -356,7 +356,7 @@ Thank you.`;
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="asharma@aiims.edu"
-                    className="w-full p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none"
+                    className="w-full text-base sm:text-xs p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none"
                   />
                 </div>
                 <div>
@@ -367,7 +367,7 @@ Thank you.`;
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="+91 98765 43210"
-                    className="w-full p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none"
+                    className="w-full text-base sm:text-xs p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none"
                   />
                 </div>
               </div>
@@ -381,7 +381,7 @@ Thank you.`;
                     value={formData.city}
                     onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                     placeholder="e.g. Bengaluru, Karnataka"
-                    className="w-full p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none"
+                    className="w-full text-base sm:text-xs p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none"
                   />
                 </div>
                 <div>
@@ -392,7 +392,7 @@ Thank you.`;
                     value={formData.pincode}
                     onChange={(e) => setFormData({ ...formData, pincode: e.target.value })}
                     placeholder="e.g. 560012"
-                    className="w-full p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none"
+                    className="w-full text-base sm:text-xs p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none"
                   />
                 </div>
               </div>
@@ -407,7 +407,7 @@ Thank you.`;
                     value={formData.gstin}
                     onChange={(e) => setFormData({ ...formData, gstin: e.target.value })}
                     placeholder="e.g. 07AAACA0000A1Z5"
-                    className="w-full p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none"
+                    className="w-full text-base sm:text-xs p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none"
                   />
                 </div>
                 <div>
@@ -415,7 +415,7 @@ Thank you.`;
                   <select
                     value={formData.procurementMode}
                     onChange={(e) => setFormData({ ...formData, procurementMode: e.target.value })}
-                    className="w-full p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none bg-white font-medium"
+                    className="w-full text-base sm:text-xs p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none bg-white font-medium"
                   >
                     <option value="advance">Advance Bank Transfer / NEFT / RTGS (Standard / Mandatory for Cold-Chain Reservation)</option>
                     <option value="po30">Institutional Purchase Order (Subject to pre-approval whenever necessary)</option>
@@ -437,7 +437,7 @@ Thank you.`;
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                   placeholder="Specify if lot-reservation is required, or if applying for the free evaluation pack pilot..."
-                  className="w-full p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none"
+                  className="w-full text-base sm:text-xs p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none"
                 />
               </div>
 

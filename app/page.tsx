@@ -154,7 +154,7 @@ export default function HomePage() {
                     name="pi_name"
                     required
                     placeholder="Dr. Rajesh Nair"
-                    className="w-full text-xs p-2.5 border border-slate-200 rounded-lg focus:border-accent focus:outline-none bg-slate-50/50 focus:bg-white transition-all"
+                    className="w-full text-base sm:text-xs p-2.5 border border-slate-200 rounded-lg focus:border-accent focus:outline-none bg-slate-50/50 focus:bg-white transition-all"
                   />
                 </div>
                 <div>
@@ -166,7 +166,7 @@ export default function HomePage() {
                     name="institute"
                     required
                     placeholder="e.g. AIIMS, IISc, RGCB, IIT, Biocon"
-                    className="w-full text-xs p-2.5 border border-slate-200 rounded-lg focus:border-accent focus:outline-none bg-slate-50/50 focus:bg-white transition-all"
+                    className="w-full text-base sm:text-xs p-2.5 border border-slate-200 rounded-lg focus:border-accent focus:outline-none bg-slate-50/50 focus:bg-white transition-all"
                   />
                 </div>
                 <div>
@@ -178,7 +178,7 @@ export default function HomePage() {
                     name="product"
                     required
                     placeholder="e.g. MagDNA cfDNA Kit (L2057), Exosome Isolation (E103)"
-                    className="w-full text-xs p-2.5 border border-slate-200 rounded-lg focus:border-accent focus:outline-none bg-slate-50/50 focus:bg-white transition-all"
+                    className="w-full text-base sm:text-xs p-2.5 border border-slate-200 rounded-lg focus:border-accent focus:outline-none bg-slate-50/50 focus:bg-white transition-all"
                   />
                 </div>
                 <div>
@@ -190,7 +190,7 @@ export default function HomePage() {
                     name="contact"
                     required
                     placeholder="rnair@rgcb.res.in / +91 98765 43210"
-                    className="w-full text-xs p-2.5 border border-slate-200 rounded-lg focus:border-accent focus:outline-none bg-slate-50/50 focus:bg-white transition-all"
+                    className="w-full text-base sm:text-xs p-2.5 border border-slate-200 rounded-lg focus:border-accent focus:outline-none bg-slate-50/50 focus:bg-white transition-all"
                   />
                 </div>
 

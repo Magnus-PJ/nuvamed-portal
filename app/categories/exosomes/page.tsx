@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ExosomesClient from "@/components/ExosomesClient";
 
 export const metadata: Metadata = {
-  title: "Exosome Isolation Kits & MISEV Marker Antibodies (CD9, CD63, TSG101) | India | Nuvamed",
+  title: "Exosome Isolation Kits & Antibodies India | Nuvamed",
   description:
-    "Non-ultracentrifugation exosome precipitation kits from serum, plasma, urine, and media. MISEV 2023 validated CD9, CD63, CD81, and TSG101 antibodies. HSN 3822 00 90, 5% DSIR GST.",
+    "Precipitation kits for exosomes from serum, plasma, urine, plus CD9, CD63 & TSG101 antibodies. In stock in Kerala with 4-hour INR proforma turnaround.",
   keywords: [
     "exosome isolation kit India",
     "exosome precipitation price",
@@ -18,10 +18,24 @@ export const metadata: Metadata = {
     canonical: "https://www.nuvamed.co.in/categories/exosomes",
   },
   openGraph: {
-    title: "Exosome Isolation Kits & MISEV Marker Antibodies | India Distributor",
+    title: "Exosome Isolation Kits & MISEV Antibodies | India | Nuvamed",
     description: "Isolate intact 30–150 nm EVs in under 2 hours without ultracentrifugation. Authorized India distribution by Nuvamed Diagnostics LLP Limited.",
     url: "https://www.nuvamed.co.in/categories/exosomes",
     type: "website",
+    images: [
+      {
+        url: "https://www.nuvamed.co.in/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Exosome Isolation Kits & MISEV Marker Antibodies",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Exosome Isolation Kits & MISEV Antibodies | India | Nuvamed",
+    description: "Non-ultracentrifugation exosome isolation kits and MISEV antibodies in India. Fast Kerala courier dispatch.",
+    images: ["https://www.nuvamed.co.in/opengraph-image"],
   },
 };
 

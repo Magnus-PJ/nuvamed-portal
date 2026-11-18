@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import CellCultureQcClient from "@/components/CellCultureQcClient";
 
 export const metadata: Metadata = {
-  title: "Universal Mycoplasma qPCR & PCR Detection Kits (EP 2.6.7) | India | Nuvamed",
+  title: "Mycoplasma qPCR & PCR Kits (EP 2.6.7) | India | Nuvamed",
   description:
-    "TaqMan probe real-time qPCR and conventional PCR mycoplasma kits with <10 CFU/mL LOD. Formulated with internal amplification controls for EP 2.6.7 and USP <63> release testing. HSN 3822 00 90, 5% DSIR GST.",
+    "TaqMan probe real-time qPCR & conventional PCR mycoplasma kits with <10 CFU/mL sensitivity for cell culture QC. Fast courier dispatch across India.",
   keywords: [
     "mycoplasma qPCR detection kit India",
     "mycoplasma PCR kit price",
@@ -17,10 +17,24 @@ export const metadata: Metadata = {
     canonical: "https://www.nuvamed.co.in/categories/cell-culture-qc",
   },
   openGraph: {
-    title: "Universal Mycoplasma qPCR & PCR Detection Kits (EP 2.6.7) | India",
+    title: "Mycoplasma qPCR & PCR Kits (EP 2.6.7) | India | Nuvamed",
     description: "Real-time TaqMan qPCR assay detecting >100 mycoplasma species in <2 hours with <10 CFU/mL analytical sensitivity. Authorized distribution by Nuvamed Diagnostics LLP Limited.",
     url: "https://www.nuvamed.co.in/categories/cell-culture-qc",
     type: "website",
+    images: [
+      {
+        url: "https://www.nuvamed.co.in/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Universal Mycoplasma qPCR & PCR Detection Kits (EP 2.6.7)",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mycoplasma qPCR & PCR Kits (EP 2.6.7) | India | Nuvamed",
+    description: "TaqMan probe qPCR mycoplasma testing kits with EP 2.6.7 regulatory compliance in India.",
+    images: ["https://www.nuvamed.co.in/opengraph-image"],
   },
 };
 

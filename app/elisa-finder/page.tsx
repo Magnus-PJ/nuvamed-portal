@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ElisaFinderClient from "@/components/ElisaFinderClient";
 
 export const metadata: Metadata = {
-  title: "13,137 ELISA Kits Across 15 Species | India Price & Target Finder | Nuvamed",
+  title: "13,137 ELISA Kits Across 15 Species | India | Nuvamed",
   description:
-    "Searchable catalog of 13,137 pre-coated 96-test ELISA kits across Human, Mouse, Rat, Bovine, and Veterinary species. Standard & One-Step formats. 4-hour proforma quotes from Nuvamed Diagnostics.",
+    "Search 13,000+ pre-coated 96-test ELISA kits for Human, Mouse, Rat, Porcine targets. Pre-formatted INR proforma with HSN 3822 00 90 and DSIR 5% GST.",
   keywords: [
     "ELISA kit supplier India",
     "human IL-6 ELISA kit price",
@@ -18,10 +18,24 @@ export const metadata: Metadata = {
     canonical: "https://www.nuvamed.co.in/elisa-finder",
   },
   openGraph: {
-    title: "13,137 Validated ELISA Kits Across 15 Species | India Reagent Finder",
+    title: "13,137 ELISA Kits Across 15 Species | India | Nuvamed",
     description: "Search human, rodent, and veterinary biomarkers with pre-coated 96-well strip plates. Official GST quotes in 4 hours from Nuvamed Diagnostics LLP Limited.",
     url: "https://www.nuvamed.co.in/elisa-finder",
     type: "website",
+    images: [
+      {
+        url: "https://www.nuvamed.co.in/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "13,137 Validated ELISA Kits Database",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "13,137 ELISA Kits Across 15 Species | India | Nuvamed",
+    description: "Search 13,000+ pre-coated 96-test ELISA kits across 15 species with fast India dispatch. HSN 3822 00 90.",
+    images: ["https://www.nuvamed.co.in/opengraph-image"],
   },
 };
 

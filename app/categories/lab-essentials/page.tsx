@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import LabEssentialsClient from "@/components/LabEssentialsClient";
 
 export const metadata: Metadata = {
-  title: "Sterile Buffers, DNA Ladders, Pipettes & PCR Plastics | India | Nuvamed",
+  title: "Sterile Buffers, DNA Ladders India | Nuvamed",
   description:
-    "0.22 µm sterile-filtered PBS, TBS, TAE, TBE buffers, ready-to-load DNA ladders, prestained protein markers, barrier filter tips, and qPCR plates. HSN 3822 00 90 / 3926 90 99, 5% DSIR GST.",
+    "0.22 µm sterile-filtered PBS, TBS, TAE, TBE buffers, ready-to-load DNA ladders, and RNase-free plastics. Bulk pricing with fast Kerala dispatch.",
   keywords: [
     "sterile PBS buffer India",
     "TAE running buffer 50X",
@@ -17,10 +17,24 @@ export const metadata: Metadata = {
     canonical: "https://www.nuvamed.co.in/categories/lab-essentials",
   },
   openGraph: {
-    title: "Sterile Laboratory Buffers, Ladders & Plastics | India Supply",
+    title: "Sterile Buffers, DNA Ladders & Plastics | India | Nuvamed",
     description: "0.22 µm sterile molecular biology buffers, sharp DNA ladders, and RNase-free PCR consumables. Authorized distribution by Nuvamed Diagnostics LLP Limited.",
     url: "https://www.nuvamed.co.in/categories/lab-essentials",
     type: "website",
+    images: [
+      {
+        url: "https://www.nuvamed.co.in/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Sterile Laboratory Buffers, Ladders & Plastics",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sterile Buffers, DNA Ladders & Plastics | India | Nuvamed",
+    description: "Sterile molecular buffers, DNA ladders, and PCR consumables with fast Kerala delivery. HSN 3822 00 90.",
+    images: ["https://www.nuvamed.co.in/opengraph-image"],
   },
 };
 

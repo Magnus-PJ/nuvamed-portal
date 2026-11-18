@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import CfdnaProductClient from "@/components/CfdnaProductClient";
 
 export const metadata: Metadata = {
-  title: "MagDNA cf-DNA Purification Kit (Cat # L2057) | India Price & Specifications",
+  title: "MagDNA cf-DNA Kit (L2057) | India Price | Nuvamed",
   description:
-    "Superparamagnetic SPRI bead-based extraction of mononucleosomal cfDNA (167 bp) from 0.5–5.0 mL plasma. HSN 3822 00 90, 5% DSIR GST. Official quotes in 4 hours from Nuvamed Diagnostics.",
+    "SPRI magnetic bead cfDNA purification from plasma. High 167 bp mononucleosomal yield, ambient shipping, HSN 3822 00 90. Request 4-hr INR proforma quote.",
   keywords: [
     "cfDNA extraction kit India",
     "cell-free DNA purification kit price",
@@ -18,11 +18,26 @@ export const metadata: Metadata = {
     canonical: "https://www.nuvamed.co.in/products/cfdna-purification-kit",
   },
   openGraph: {
-    title: "MagDNA cf-DNA Purification Kit (Cat # L2057) | India Distributor",
+    title: "MagDNA cf-DNA Kit (L2057) | India Price & Specs | Nuvamed",
     description:
-      "Selective 167 bp apoptotic cfDNA fragment recovery with ~75% cost savings vs imported columns. 4-hour proforma invoice SLA from Nuvamed Diagnostics LLP Limited.",
+      "Selective 167 bp apoptotic cfDNA fragment recovery with ~75% cost savings vs imported columns. 4-hour proforma invoice SLA from Nuvamed Diagnostics.",
     url: "https://www.nuvamed.co.in/products/cfdna-purification-kit",
     type: "website",
+    images: [
+      {
+        url: "https://www.nuvamed.co.in/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "MagDNA cf-DNA Purification Kit (Cat # L2057)",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MagDNA cf-DNA Kit (L2057) | India Price & Specs | Nuvamed",
+    description:
+      "SPRI bead cfDNA extraction from plasma. High 167 bp recovery, ambient shipping, HSN 3822 00 90.",
+    images: ["https://www.nuvamed.co.in/opengraph-image"],
   },
 };
 
@@ -53,6 +68,40 @@ const productJsonLd = {
         seller: {
           "@type": "Organization",
           name: "Nuvamed Diagnostics LLP Limited",
+        },
+        hasMerchantReturnPolicy: {
+          "@type": "MerchantReturnPolicy",
+          returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+          merchantReturnDays: 7,
+          returnMethod: "https://schema.org/ReturnByMail",
+          returnFees: "https://schema.org/FreeReturn",
+        },
+        shippingDetails: {
+          "@type": "OfferShippingDetails",
+          shippingRate: {
+            "@type": "MonetaryAmount",
+            value: "0",
+            currency: "INR",
+          },
+          shippingDestination: {
+            "@type": "DefinedRegion",
+            addressCountry: "IN",
+          },
+          deliveryTime: {
+            "@type": "ShippingDeliveryTime",
+            handlingTime: {
+              "@type": "QuantitativeValue",
+              minValue: 1,
+              maxValue: 2,
+              unitCode: "DAY",
+            },
+            transitTime: {
+              "@type": "QuantitativeValue",
+              minValue: 2,
+              maxValue: 4,
+              unitCode: "DAY",
+            },
+          },
         },
       },
     },

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import DnaRnaExtractionClient from "@/components/DnaRnaExtractionClient";
 
 export const metadata: Metadata = {
-  title: "DNA & RNA Extraction Kits, Viral RNA, Endo-Free Plasmids | India | Nuvamed",
+  title: "DNA & RNA Extraction Kits India | Nuvamed",
   description:
-    "Magnetic-bead and spin column kits for viral DNA/RNA (L2056, L1051), transfection-grade endotoxin-free plasmid midipreps/maxipreps, and bulk magnetic beads (LA-1003). HSN 3822 00 90, 5% DSIR GST.",
+    "Magnetic-bead and spin column kits for viral DNA/RNA and transfection-grade endotoxin-free plasmids. Express dispatch to Indian universities and labs.",
   keywords: [
     "viral RNA extraction kit India",
     "plasmid maxiprep kit price",
@@ -18,10 +18,24 @@ export const metadata: Metadata = {
     canonical: "https://www.nuvamed.co.in/categories/dna-rna-extraction",
   },
   openGraph: {
-    title: "DNA & RNA Extraction Kits, Viral RNA, Endo-Free Plasmids | India",
+    title: "DNA & RNA Extraction Kits (Viral & Plasmid) | India | Nuvamed",
     description: "Magnetic-bead and silica columns for viral RNA/DNA, genomic DNA, and endotoxin-free plasmids (<0.1 EU/µg). Authorized distribution by Nuvamed Diagnostics LLP Limited.",
     url: "https://www.nuvamed.co.in/categories/dna-rna-extraction",
     type: "website",
+    images: [
+      {
+        url: "https://www.nuvamed.co.in/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "DNA & RNA Extraction Kits, Viral RNA, Endo-Free Plasmids",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DNA & RNA Extraction Kits (Viral & Plasmid) | India | Nuvamed",
+    description: "Viral RNA/DNA isolation kits and endotoxin-free plasmid purification in India. HSN 3822 00 90.",
+    images: ["https://www.nuvamed.co.in/opengraph-image"],
   },
 };
 
