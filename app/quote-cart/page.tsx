@@ -59,10 +59,13 @@ export default function QuoteCartPage() {
             SLA Commitment: 4 Working Hours &bull; Nuvamed Diagnostics Desk
           </div>
           <p className="text-slate-600">
-            An official Proforma Invoice PDF in Indian Rupees (INR) with itemized unit pricing, HSN Code 3822 00 90, DSIR 5% Concessional GST split, and delivery timeline will be dispatched to <strong>{formData.email}</strong> and WhatsApp (<strong>{formData.phone}</strong>), with a copy routed to the procurement desk at <strong>nuvameddx@gmail.com</strong>.
+            An official Proforma Invoice PDF in Indian Rupees (INR) with itemized unit pricing, HSN Code 3822 00 90, DSIR 5% Concessional GST split, and delivery timeline will be dispatched to <strong>{formData.email}</strong>, with a copy routed to the procurement desk at <strong>nuvameddx@gmail.com</strong>.
           </p>
           <div className="text-[11px] text-slate-500 pt-1">
             Documentation included: Authorized Distributor Undertaking by Nuvamed Diagnostics LLP Limited &bull; Lot-Specific COA &bull; Safety Data Sheet (SDS).
+          </div>
+          <div className="bg-amber-50 border border-amber-200 text-amber-900 rounded p-2.5 text-[11px] leading-relaxed">
+            <strong>💳 Order Fulfillment Notice:</strong> Order booking & lot allocation are confirmed upon <strong>Advance Payment only</strong> (or official Institutional Purchase Order wherever necessary and pre-approved). Direct WhatsApp-based booking & tracking will be live soon.
           </div>
         </div>
 
@@ -74,12 +77,10 @@ export default function QuoteCartPage() {
             Return to Product Catalog
           </Link>
           <a
-            href={`https://wa.me/919400000000?text=Hello%20Nuvamed%20Diagnostics%20India,%20I%20have%20submitted%20Quote%20Request%20${encodeURIComponent(rfqId)}%20for%20Dr.%20${encodeURIComponent(formData.piName)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2.5 px-5 rounded transition-colors flex items-center gap-1.5"
+            href="mailto:nuvameddx@gmail.com?subject=Urgent%20RFQ%20Confirmation%20-%20Nuvamed%20Diagnostics"
+            className="bg-slate-800 hover:bg-slate-900 text-white text-xs font-bold py-2.5 px-5 rounded transition-colors flex items-center gap-1.5"
           >
-            <span>Connect on WhatsApp</span>
+            <span>Email Procurement Desk</span>
           </a>
         </div>
       </div>
@@ -300,17 +301,20 @@ export default function QuoteCartPage() {
                   />
                 </div>
                 <div>
-                  <label className="font-bold text-primary block mb-1">Preferred Procurement Channel</label>
+                  <label className="font-bold text-primary block mb-1">Preferred Procurement & Payment Terms *</label>
                   <select
                     value={formData.procurementMode}
                     onChange={(e) => setFormData({ ...formData, procurementMode: e.target.value })}
-                    className="w-full p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none bg-white"
+                    className="w-full p-2.5 border border-slate-300 rounded focus:border-accent focus:outline-none bg-white font-medium"
                   >
-                    <option value="po30">Institutional Purchase Order (30-Day Credit Terms)</option>
-                    <option value="gem">Government e-Marketplace (GeM) Direct Contract</option>
-                    <option value="advance">Advance Bank Transfer / NEFT / RTGS</option>
+                    <option value="advance">Advance Bank Transfer / NEFT / RTGS (Standard / Mandatory for Cold-Chain Reservation)</option>
+                    <option value="po30">Institutional Purchase Order (Subject to pre-approval whenever necessary)</option>
+                    <option value="gem">Government e-Marketplace (GeM) Direct Contract (Wherever applicable)</option>
                     <option value="tender">Rate Contract / Formal Tender Quotation</option>
                   </select>
+                  <p className="text-[11px] text-slate-500 mt-1">
+                    * Policy Notice: Order booking confirmed upon <strong>Advance Payment only</strong> (or official Institutional PO whenever necessary & verified).
+                  </p>
                 </div>
               </div>
 
@@ -367,17 +371,20 @@ export default function QuoteCartPage() {
           </div>
 
           <div className="pt-4 border-t border-slate-200">
-            <h4 className="font-bold text-xs text-primary mb-1">Direct Technical Support</h4>
-            <p className="text-slate-500 text-[11px] mb-3">
-              Have an urgent purchase committee deadline today? Speak with our technical sales scientist.
+            <div className="flex items-center justify-between mb-1">
+              <h4 className="font-bold text-xs text-primary">Direct Procurement Desk</h4>
+              <span className="font-mono text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-bold">
+                WhatsApp Live Soon
+              </span>
+            </div>
+            <p className="text-slate-500 text-[11px] mb-3 leading-relaxed">
+              Booking confirmed by <strong>Advance Payment only</strong> (or institutional PO whenever necessary). Direct WhatsApp booking will be live soon; please route immediate inquiries to our email desk.
             </p>
             <a
-              href="https://wa.me/919400000000?text=Urgent%20Quote%20Request%20Assistance"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-3 rounded block text-center transition-colors"
+              href="mailto:nuvameddx@gmail.com?subject=Urgent%20Institutional%20Quote%20Assistance"
+              className="w-full bg-[#0b1d33] hover:bg-[#143152] text-white font-bold py-2.5 px-3 rounded block text-center transition-colors text-xs"
             >
-              Connect on WhatsApp (+91 94000 00000)
+              Contact Desk: nuvameddx@gmail.com
             </a>
           </div>
         </div>

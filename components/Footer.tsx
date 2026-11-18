@@ -22,7 +22,10 @@ export default function Footer() {
             <div className="space-y-1 font-mono text-[11px] text-slate-300">
               <div>📍 Regional Logistics Hub: Kochi, Kerala, India</div>
               <div>📧 Direct Procurement Desk: <a href="mailto:nuvameddx@gmail.com" className="text-teal-300 underline">nuvameddx@gmail.com</a></div>
-              <div>📞 Technical Support & WhatsApp: +91 94000 00000</div>
+              <div>💬 WhatsApp Booking: <span className="text-amber-300 font-sans italic">Live Soon (Direct inquiries via email in the interim)</span></div>
+              <div className="text-teal-200/90 pt-1 font-sans text-xs">
+                💳 <strong>Payment Terms:</strong> Booking confirmed by <strong>Advance Payment only</strong> (or pre-approved Institutional Purchase Orders wherever necessary).
+              </div>
             </div>
           </div>
 

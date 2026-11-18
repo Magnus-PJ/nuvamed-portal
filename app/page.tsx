@@ -139,8 +139,8 @@ export default function HomePage() {
                 >
                   Generate Official Proforma Invoice
                 </button>
-                <p className="text-[11px] text-slate-500 text-center">
-                  🔒 Concessional 5% DSIR / 18% Compliant Billing. Research Use Only (RUO).
+                <p className="text-[11px] text-slate-500 text-center leading-relaxed">
+                  🔒 Booking by <strong>Advance Payment only</strong> (or pre-approved Institutional PO wherever necessary) &bull; Concessional 5% DSIR / 18% Compliant Billing &bull; WhatsApp Booking Live Soon.
                 </p>
               </form>
             </div>

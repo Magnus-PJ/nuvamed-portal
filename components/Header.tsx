@@ -48,14 +48,11 @@ export default function Header() {
               <span>nuvameddx@gmail.com</span>
             </a>
             <span className="text-slate-600">&bull;</span>
-            <a
-              href="https://wa.me/919400000000?text=Hello%20Nuvamed%20Diagnostics%20Desk,%20I%20have%20an%20inquiry"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-200 hover:text-white font-medium flex items-center gap-1 transition-colors"
-            >
-              <span>WhatsApp: +91 94000 00000</span>
-            </a>
+            <span className="font-mono text-amber-300 bg-amber-950/70 border border-amber-800/80 px-2 py-0.5 rounded text-[11px]">
+              WhatsApp Booking: Live Soon
+            </span>
+            <span className="text-slate-600 hidden xl:inline">&bull;</span>
+            <span className="hidden xl:inline text-slate-300 text-[11px]">Advance Payment Only / PO Wherever Necessary</span>
           </div>
         </div>
       </aside>
@@ -92,14 +89,12 @@ export default function Header() {
               <span>Email Desk</span>
             </a>
 
-            <a
-              href="https://wa.me/919400000000?text=Hi%20Nuvamed%20Diagnostics,%20I%20would%20like%20to%20request%20a%20quote"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden lg:inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 bg-emerald-50/80 border border-emerald-200 px-3 py-2 rounded-lg hover:bg-emerald-100 transition-colors"
-            >
+            <div className="hidden lg:inline-flex items-center gap-1.5 text-xs font-bold text-slate-600 bg-slate-50 border border-slate-200 px-3 py-2 rounded-lg cursor-default">
               <span>WhatsApp Desk</span>
-            </a>
+              <span className="font-mono text-[10px] bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded font-bold">
+                Live Soon
+              </span>
+            </div>
 
             <button
               onClick={() => setDrawerOpen(true)}
