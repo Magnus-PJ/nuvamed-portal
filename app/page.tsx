@@ -2,9 +2,70 @@ import React from "react";
 import Link from "next/link";
 import SamplePicker from "@/components/SamplePicker";
 
+const homeJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.nuvamed.co.in/#webpage",
+      url: "https://www.nuvamed.co.in",
+      name: "Nuvamed Diagnostics | Luminous BioSciences India Channel",
+      description:
+        "Direct authorized India supply channel for US-manufactured cfDNA, exosome, and mycoplasma testing kits. Official GST proforma invoices in 4 hours.",
+      isPartOf: {
+        "@id": "https://www.nuvamed.co.in/#website",
+      },
+      about: {
+        "@id": "https://www.nuvamed.co.in/#organization",
+      },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Who is the authorized distributor for Luminous BioSciences in India?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Nuvamed Diagnostics LLP Limited is the direct authorized supply and distribution channel for Luminous BioSciences USA across India, providing lot-specific COA, cold-chain logistics from Kochi, Kerala, and official INR billing with HSN Code 3822 00 90.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is the turnaround time for receiving an institutional proforma invoice?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Nuvamed Diagnostics provides official INR Proforma Invoices within 4 business hours, customized with DSIR 5% Concessional GST exemption or standard 18% GST billing.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How are temperature-sensitive reagents transported across India?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Ambient reagents (such as MagDNA cfDNA kits) ship under standard air transit to avoid unnecessary thermal charges. Cold-chain items (-20°C and 2-8°C enzymes, antibodies, and media) are shipped with domestic temperature data loggers and insulated dry-ice / blue-ice packaging.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What are the payment and booking terms?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Order booking and cold-chain lot reservation are confirmed upon Advance Payment only (or pre-approved Institutional Purchase Orders wherever necessary upon verification).",
+          },
+        },
+      ],
+    },
+  ],
+};
+
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
+      />
       {/* Hero Section: Calming Midnight Slate & Soft Teal Accent */}
       <section className="bg-gradient-to-br from-[#091729] via-[#0d223a] to-[#112a44] text-white py-14 md:py-18 border-b border-slate-800 relative overflow-hidden">
         {/* Soft Ambient Radial Glow (reduces eye strain, adds depth) */}
